@@ -1,31 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PlayTime-YT Playlist Duration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlayTime</title>
   <link rel="stylesheet" href="popup.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div class="container">
-    <header class="header">
-      <div class="title">PlayTime-YT Playlist Duration</div>
-      <button id="refreshBtn" title="Calculate Duration">🕛</button>
+    <header>
+      <div class="brand">
+        <span class="logo-icon"><img src="../icons/icon-16.png" alt="PlayTime"></span> PlayTime
+      </div>
     </header>
 
-    <main class="main">
-      <div id="status">Click the button to calculate playlist length.</div>
-      <div id="result" class="hidden">
-        <div id="time" class="time">—</div>
-        <div id="meta" class="meta">—</div>
+    <main>
+      <!-- Active State -->
+      <div id="content" class="hidden">
+        <div class="hero">
+          <div class="label">Total Duration</div>
+          <div id="total-time" class="time-display">00h 00m 00s</div>
+          <div id="video-count" class="badge">0 Videos</div>
+          <div id="avg-time" class="average">Avg: 0m 0s</div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="speed-label">1.25x</span>
+            <span id="speed-125" class="speed-val">--</span>
+          </div>
+          <div class="stat-card">
+            <span class="speed-label">1.5x</span>
+            <span id="speed-150" class="speed-val">--</span>
+          </div>
+          <div class="stat-card">
+            <span class="speed-label">2x</span>
+            <span id="speed-200" class="speed-val">--</span>
+          </div>
+        </div>
+
+        <!-- Calendar / Schedule Section -->
+        <div class="schedule-section">
+          <button id="toggle-schedule-btn" class="secondary-btn">Schedule Learning</button>
+
+          <div id="schedule-options" class="hidden">
+            <div class="input-group">
+              <label for="days-input">Days to finish:</label>
+              <input type="number" id="days-input" min="1" max="365" value="3" />
+            </div>
+
+            <div class="input-group">
+              <label for="start-date-input">Start Date:</label>
+              <input type="date" id="start-date-input" />
+            </div>
+
+            <div id="schedule-preview" class="schedule-preview">
+              Target: <span id="videos-per-day"></span> videos/day
+            </div>
+
+            <button id="download-ics-btn" class="primary-btn">Download Calendar (.ics)</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="hidden">
+        <div class="empty-icon">📺</div>
+        <p>No active playlist found.</p>
+        <small>Open a YouTube playlist to see stats.</small>
       </div>
     </main>
-
-    <footer class="footer">
-      <small>@nahinio</small>
-    </footer>
   </div>
-
   <script src="popup.js"></script>
 </body>
+
 </html>
