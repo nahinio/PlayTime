@@ -1,204 +1,109 @@
 <div align="center">
+  <img src="icons/icon-128.png" width="100" height="100" alt="PlayTime Logo">
 
-# PlayTime
-### *A minimal Chrome extension that instantly shows you the total duration of any YouTube playlist*
+  # PlayTime
+  ### Mastering Learning: Instant YouTube Playlist Durations and Smart Scheduling
 
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Chrome Extension](https://img.shields.io/badge/Platform-Chrome-orange.svg)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+  [![Manifest V3](https://img.shields.io/badge/Chrome-MV3-blue.svg)](https://developer.chrome.com/docs/extensions/mv3/intro/)
+  [![Pure JS](https://img.shields.io/badge/Made%20with-Vanilla%20JS-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  [![Chrome Web Store](https://img.shields.io/badge/Platform-Chrome-orange.svg)](https://chromewebstore.google.com/detail/playtime/bfcaagblhkfhkaacmcdnaiakaabkjhdo)
 
-[Features](#-features) • [Installation](#-installation) • [Usage](#-how-it-works) • [Contributing](#-contributing)
+  [Overview](#-overview) • [Key Features](#-key-features) • [Installation](#-installation) • [Usage](#-how-to-use) • [Project Structure](#-project-structure) • [Contributing](#-contributing)
 
----
+  ---
 </div>
 
-## 🎯 The Problem
+## Overview
 
-You find an interesting YouTube playlist. Could be a tutorial series, a music collection, or a podcast archive. But there's no way to know: *"Can I actually finish this?"*
+PlayTime is a lightweight, privacy-focused Chrome extension designed for students, developers, and researchers. It provides immediate calculations of YouTube playlist durations, enabling more effective time management for educational content and professional development.
 
-YouTube doesn't show total playlist duration upfront. You're left guessing, scrolling, or doing mental math.
-
-**PlayTime fixes that.**
+By automating the calculation process, PlayTime ensures that learners can plan their study sessions with precision and better estimate the time commitment required for complex playlists.
 
 ---
 
-## ✨ Features
+## Key Features
 
-<table>
-<tr>
-<td>
+### Duration Calculation
+Calculates the total viewing time for any YouTube playlist. The tool integrates directly with playlist and watch pages for seamless data retrieval.
 
-### ⚡ Instant Calculation
-Calculates total duration the moment you open any playlist. No waiting, no loading.
+### Smart Learning Schedule
+A productivity-focused feature that allows users to:
+- Establish target completion deadlines.
+- Calculate required daily video consumption.
+- Generate and export a professional .ics calendar file for use with Google Calendar, Outlook, and Apple Calendar.
 
-</td>
-<td>
+### Playback Speed Analysis
+Provides duration estimates based on standard playback speeds (1.25x, 1.5x, and 2.0x), catering to high-speed learning requirements.
 
-### 🪶 Featherweight
-Pure vanilla JavaScript. No bloated frameworks, no unnecessary dependencies. Just clean, efficient code.
-
-</td>
-</tr>
-<tr>
-<td>
-
-### 🔒 Privacy Guaranteed
-Zero data collection. Zero analytics. Zero tracking. Your browsing stays yours. Period.
-
-</td>
-<td>
-
-### 🎨 Native Integration
-Blends seamlessly into YouTube's interface. Feels like it was always meant to be there.
-
-</td>
-</tr>
-</table>
+### Privacy and Performance
+- **Zero Tracking:** No telemetry or data collection of any kind.
+- **Local Execution:** All logic is processed within the browser environment.
+- **Resource Efficient:** Built with vanilla JavaScript to ensure zero impact on browser performance.
 
 ---
 
-## 🚀 Installation
+## Installation
 
-> **Note:** PlayTime is currently only available for manual installation. Chrome Web Store listing coming soon!
+### Official Distribution
+Standard installation is available via the **[Chrome Web Store](https://chromewebstore.google.com/detail/playtime/bfcaagblhkfhkaacmcdnaiakaabkjhdo)**.
 
-### Manual Installation Guide
-
-**Step 1:** Clone or download this repository
-```bash
-git clone https://github.com/nahinio/PlayTime.git
-```
-
-Or click the green **Code** button above → **Download ZIP** and extract it.
-
-**Step 2:** Open Chrome Extensions page
-- Navigate to `chrome://extensions/` in your Chrome browser
-- Or click the puzzle icon → **Manage Extensions**
-
-**Step 3:** Enable Developer Mode
-- Toggle the **Developer mode** switch in the top-right corner
-
-**Step 4:** Load the extension
-- Click **Load unpacked**
-- Select the `PlayTime` folder from where you downloaded it
-
-**Step 5:** You're done! 🎉
-- The extension icon should appear in your toolbar
-- Visit any YouTube playlist to see it in action
+### Manual Development Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nahinio/PlayTime.git
+   ```
+2. Navigate to `chrome://extensions/` in the Chrome browser.
+3. Enable **Developer Mode**.
+4. Select **Load unpacked** and choose the project directory.
 
 ---
 
-## 🎮 How It Works
+## How to Use
 
-Using PlayTime couldn't be simpler:
-
-1. **Open any YouTube playlist** — Music, tutorials, podcasts, whatever
-2. **PlayTime automatically calculates** — Total duration appears instantly
-3. **Make informed decisions** — Know if you have time before you dive in
-
-No buttons to click. No settings to configure. It just works.
-
-
-[![PlayTime demo](https://img.youtube.com/vi/KRd0ZLhZsOE/hqdefault.jpg)](https://youtu.be/KRd0ZLhZsOE)
-
-Click the image to open the demo video on YouTube:
+1. Navigate to a YouTube playlist page.
+2. Select the PlayTime icon in the browser toolbar.
+3. Review the calculated statistics, including total duration and average video length.
+4. (Optional) Utilize the "Schedule Learning" feature to generate a custom completion timeline and export it to your calendar.
 
 ---
 
-## 🛠️ Built With
+## Project Structure
 
-- **Pure JavaScript** — No frameworks, no bloat
-- **Chrome Extension APIs** — Manifest V3 compliant
-- **Zero Dependencies** — Lightweight by design
-
-*Sometimes the best tool is the simplest one.*
-
----
-
-## 🤝 Contributing
-
-PlayTime is open source and thrives on community contributions. Whether you're fixing a typo or adding a killer feature, all contributions are welcome!
-
-### Ways to Contribute
-
-- 🐛 **Found a bug?** Open an issue
-- 💡 **Have an idea?** Start a discussion
-- 🔧 **Want to code?** Submit a pull request
-- 📖 **Improve docs?** Documentation PRs are awesome
-- ⭐ **Love PlayTime?** Star the repo and spread the word
-
-### Quick Start for Contributors
-
-```bash
-# Fork and clone the repo
-git clone https://github.com/YOUR-USERNAME/PlayTime.git
-
-# Create a new branch
-git checkout -b feature/amazing-feature
-
-# Make your changes and commit
-git commit -m "Add amazing feature"
-
-# Push and open a PR
-git push origin feature/amazing-feature
+```text
+PlayTime/
+├── icons/            # Visual assets
+├── content/
+│   └── content.js    # Data extraction logic
+├── popup/
+│   ├── popup.html    # User interface
+│   ├── popup.css     # Styling
+│   └── popup.js      # Core application logic and .ics generation
+├── background.js     # Background service worker
+├── manifest.json     # Extension manifest (MV3)
+└── readme.md         # Documentation
 ```
 
 ---
 
-## 🗺️ Roadmap
+## Contributing
 
-What's next for PlayTime? Here's what's brewing:
+The project welcomes contributions from the community. To contribute, please follow the standard fork-and-pull-request workflow:
 
-- [ ] **Time Format Options** — Display as HH:MM:SS or total hours
-- [ ] **Watch Time Stats** — Average video length, longest/shortest videos
-- [ ] **Speed Adjustments** — See duration at 1.25x, 1.5x, 2x speeds
-- [ ] **Firefox Support** — Port to Firefox Add-ons
-- [ ] **Playlist Comparisons** — Compare durations across multiple playlists
-- [ ] **Export Options** — Save playlist stats for later
-
-*Have ideas? Open an issue with the "enhancement" label!*
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/NewFeature`).
+3. Commit your changes (`git commit -m 'Add NewFeature'`).
+4. Push to the branch (`git push origin feature/NewFeature`).
+5. Open a Pull Request for review.
 
 ---
 
-## 💭 FAQ
+## License
 
-**Q: Does this work on private playlists?**  
-A: Yes! If you can view the playlist, PlayTime can calculate it.
-
-**Q: Will this slow down YouTube?**  
-A: Nope. PlayTime is optimized to be lightning-fast with zero impact on performance.
-
-**Q: Does it collect my data?**  
-A: Absolutely not. PlayTime doesn't collect, store, or transmit any data. Ever.
-
-**Q: Can I use this on mobile?**  
-A: Currently only Chrome desktop is supported. Mobile support may come in the future!
-
----
-
-## 📄 License
-
-PlayTime is MIT licensed. Use it, modify it, share it, build upon it. It's yours.
-
-See [LICENSE](LICENSE) for the full legal text.
-
----
-
-## 🙏 Acknowledgments
-
-- Built out of genuine frustration with YouTube's lack of playlist duration display
-- Inspired by the philosophy that great tools should be simple, fast, and respect user privacy
-- Shoutout to everyone who's ever asked "How long is this playlist?" only to be met with silence
+This project is licensed under the MIT License. See the `LICENSE` file for full details.
 
 ---
 
 <div align="center">
-
-### 🌟 If PlayTime saves you time, show some love with a star!
-
-*Making YouTube playlists transparent, one extension at a time*
-
----
-
-![GitHub stars](https://img.shields.io/github/stars/nahinio/PlayTime?style=social)
-![GitHub forks](https://img.shields.io/github/forks/nahinio/PlayTime?style=social)
-
+  <p>Developed for the global learning community.</p>
 </div>
